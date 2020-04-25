@@ -14,15 +14,9 @@ function saveThemePreference(theme) {
   }
 }
 
-function getThemeAccordingToCurrentTime() {
-  const today = new Date();
-  const currentHour = today.getHours();
-  return (currentHour <= 19 && currentHour >= 5) ? "light" : "dark";
-}
-
 export default {
   state: {
-    theme: loadThemePreference() || getThemeAccordingToCurrentTime(),
+    theme: loadThemePreference() || 'light',
     inTransition: false
   },
   getters: {
