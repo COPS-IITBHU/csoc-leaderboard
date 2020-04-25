@@ -1,11 +1,17 @@
 const KEY_THEME = 'theme';
 
 function loadThemePreference() {
-  return localStorage.getItem(KEY_THEME);
+  // A fix for webpack error: localStorage not defined
+  if (typeof window !== 'undefined' && window.localStorage) {
+    return localStorage.getItem(KEY_THEME);
+  }
 }
 
 function saveThemePreference(theme) {
-  localStorage.setItem(KEY_THEME, theme);
+  // A fix for webpack error: localStorage not defined
+  if (typeof window !== 'undefined' && window.localStorage) {
+    localStorage.setItem(KEY_THEME, theme);
+  }
 }
 
 function getThemeAccordingToCurrentTime() {
