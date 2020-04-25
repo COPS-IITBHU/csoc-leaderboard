@@ -1,5 +1,5 @@
 <template>
-  <div :data-theme="$store.getters.currentTheme" :class="['layout', themeTransitionStyle]">
+  <div :data-theme="currentTheme" :class="['layout', themeTransitionStyle]">
     <Navbar />
     <slot/>
     <Footer />
@@ -26,6 +26,9 @@ export default {
   computed: {
     themeTransitionStyle: function() {
       return this.$store.getters.inTransition ? 'themeTransition' : null;
+    },
+    currentTheme() {
+      return this.$store.getters.currentTheme;
     }
   }
 }
