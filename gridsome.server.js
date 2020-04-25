@@ -7,7 +7,14 @@
 
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+    const PointsSchema = require('./src/data/points_schema.json');
+    const collection = addCollection({
+      typeName: 'Tasks'
+    });
+
+    for (const task of PointsSchema) {
+      collection.addNode(task);
+    }
   })
 
   api.createPages(({ createPage }) => {

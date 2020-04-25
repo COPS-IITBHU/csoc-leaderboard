@@ -1,15 +1,8 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
+  <div :data-theme="$store.getters.currentTheme" :class="['layout', themeTransitionStyle]">
+    <Navbar />
     <slot/>
+    <Footer />
   </div>
 </template>
 
@@ -21,30 +14,30 @@ query {
 }
 </static-query>
 
+<script>
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+export default {
+  components: {
+    Navbar,
+    Footer
+  },
+  computed: {
+    themeTransitionStyle: function() {
+      return this.$store.getters.inTransition ? 'themeTransition' : null;
+    }
+  }
+}
+</script>
+
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-
 .layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  background: var(--background-color);
+  min-height: 100vh;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
+.themeTransition {
+  transition: all 0.4s !important;
 }
 </style>

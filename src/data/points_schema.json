@@ -1,0 +1,40 @@
+[
+    {
+        "taskId": 1,
+        "taskName": "Todo App",
+        "subtasks": [
+            {
+                "subtaskName": "DOM",
+                "totalPoints": "30"
+            },
+            {
+                "subtaskName": "Rest APIs",
+                "totalPoints": "50"
+            }
+        ]
+    },
+    {
+        "taskId": 2,
+        "taskName": "Django",
+        "subtasks": [
+            {
+                "subtaskName": "Library",
+                "totalPoints": "60"
+            },
+            {
+                "subtaskName": "Auth",
+                "totalPoints": "100"
+            }
+        ]
+    },
+    {
+        "taskId": 3,
+        "taskName": "DRF",
+        "subtasks": [
+            {
+                "subtaskName": "Serializers",
+                "totalPoints": "15"
+            }
+        ]
+    }
+]

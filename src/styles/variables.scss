@@ -1,0 +1,6 @@
+$primary: #00a672;
+$primary-invert: findColorInvert($primary);
+
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
