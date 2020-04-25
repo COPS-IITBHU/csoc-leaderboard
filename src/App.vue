@@ -45,6 +45,4 @@ export default {
     @import "./styles/variables.scss";
     @import "~bulma";
     @import "~buefy/src/scss/buefy";
-
-    @import url(http://allfont.net/allfont.css?fonts=agency-fb);
 </style>

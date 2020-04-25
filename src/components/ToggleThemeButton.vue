@@ -5,7 +5,7 @@
     v-on:click="toggleTheme()"
     tag="div"
   >
-    <b-icon pack="fas" :icon="toggleIcon" size="is-large" class="theme-sun"></b-icon>
+    <b-icon pack="fas" :icon="toggleIcon" size="is-large" class="theme-button"></b-icon>
   </b-navbar-item>
 </template>
 
@@ -47,7 +47,7 @@ export default {
   margin-left: auto;
 }
 
-.theme-sun {
+.theme-button {
   color: var(--text-color);
 }
 </style>

@@ -51,4 +51,10 @@ export default function (Vue, { appOptions, router, head, isClient }) {
       theme
     }
   });
+
+  // Agency FB Font
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://d33wubrfki0l68.cloudfront.net/css/2f43addac6a9cb300be88fb934d2e1ad969bb093/static/css/agency-fb.css'
+  })
 }
