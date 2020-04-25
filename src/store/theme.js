@@ -22,7 +22,7 @@ function getThemeAccordingToCurrentTime() {
 
 export default {
   state: {
-    theme: loadThemePreference() || getThemeAccordingToCurrentTime(),
+    theme: loadThemePreference() || 'light',
     inTransition: false
   },
   getters: {
