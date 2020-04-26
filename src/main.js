@@ -9,7 +9,7 @@ import 'buefy/dist/buefy.css'
 import VueMq from 'vue-mq'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSun, faMoon, faExclamation } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faExclamation, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import Vuex from "vuex";
@@ -20,7 +20,7 @@ export default function (Vue, { appOptions, router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 
   // Fontawesome
-  library.add(faSun, faMoon, faExclamation);
+  library.add(faSun, faMoon, faExclamation, faAngleLeft, faAngleRight);
   Vue.component('vue-fontawesome', FontAwesomeIcon);
 
   // Use Buefy
