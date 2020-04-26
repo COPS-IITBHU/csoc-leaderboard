@@ -5,7 +5,7 @@
         <div class="csoc-logo">{{ logoText }}</div>
       </b-navbar-item>
     </template>
-    <template slot="start">
+    <template slot="start" v-if="!is404">
       <b-navbar-item
         :active="true"
         class="csoc-leaderboard"
@@ -30,6 +30,12 @@ export default {
   name: "Navbar",
   components: {
     ToggleThemeButton
+  },
+  props: {
+    is404: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     logoText() {
@@ -60,5 +66,6 @@ export default {
 
 .theme-navbar {
   background: var(--background-color) !important;
+  margin-bottom: 20px;
 }
 </style>

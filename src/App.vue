@@ -32,10 +32,14 @@ export default {
     // Theme variables
     :root {
         --background-color: #071521;
+        --background-color-secondary: #091a28;
+        --border-color: #0d2538;
         --text-color: #ebf4f1;
 
         [data-theme="light"] {
-            --background-color: #ecf0f3;
+            --background-color: #f3f5f4;
+            --background-color-secondary: #fff;
+            --border-color: #cfe6e6;
             --text-color: rgba(0,0,0,0.8);
         }
     }

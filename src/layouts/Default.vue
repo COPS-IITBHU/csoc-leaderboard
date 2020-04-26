@@ -1,6 +1,6 @@
 <template>
   <div :data-theme="$store.getters.currentTheme" :class="['layout', themeTransitionStyle]">
-    <Navbar />
+    <Navbar :is404="is404" />
     <slot/>
     <Footer />
   </div>
@@ -22,6 +22,12 @@ export default {
   components: {
     Navbar,
     Footer
+  },
+  props: {
+    is404: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     themeTransitionStyle: function() {
