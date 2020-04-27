@@ -1,22 +1,6 @@
-const KEY_THEME = 'theme';
-
-function loadThemePreference() {
-  // A fix for webpack error: localStorage not defined
-  if (typeof window !== 'undefined' && window.localStorage) {
-    return localStorage.getItem(KEY_THEME);
-  }
-}
-
-function saveThemePreference(theme) {
-  // A fix for webpack error: localStorage not defined
-  if (typeof window !== 'undefined' && window.localStorage) {
-    localStorage.setItem(KEY_THEME, theme);
-  }
-}
-
 export default {
   state: {
-    theme: loadThemePreference() || 'light',
+    theme: 'dark',
     inTransition: false
   },
   getters: {
@@ -30,7 +14,6 @@ export default {
   mutations: {
     TOGGLE_THEME(state) {
       state.theme = state.theme === "dark" ? "light" : "dark";
-      saveThemePreference(state.theme);
     }
   },
   actions: {

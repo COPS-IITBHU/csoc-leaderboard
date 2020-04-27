@@ -398,4 +398,8 @@ strong {
 thead th {
   color: var(--text-color) !important;
 }
+
+tr {
+  border: 1px solid var(--border-color);
+}
 </style>
