@@ -9,7 +9,7 @@ import 'buefy/dist/buefy.css'
 import VueMq from 'vue-mq'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSun, faMoon, faExclamation, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faExclamation, faAngleLeft, faAngleRight, faAngleUp, faAngleDown, faMedal, faFrown} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import Vuex from "vuex";
@@ -20,7 +20,7 @@ export default function (Vue, { appOptions, router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 
   // Fontawesome
-  library.add(faSun, faMoon, faExclamation, faAngleLeft, faAngleRight);
+  library.add(faSun, faMoon, faExclamation, faAngleLeft, faAngleRight, faAngleUp, faAngleDown, faMedal, faFrown);
   Vue.component('vue-fontawesome', FontAwesomeIcon);
 
   // Use Buefy
@@ -56,5 +56,9 @@ export default function (Vue, { appOptions, router, head, isClient }) {
   head.link.push({
     rel: 'stylesheet',
     href: 'https://d33wubrfki0l68.cloudfront.net/css/2f43addac6a9cb300be88fb934d2e1ad969bb093/static/css/agency-fb.css'
-  })
+  });
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Baloo+Bhaina+2&display=swap'
+  });
 }

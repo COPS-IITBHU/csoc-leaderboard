@@ -33,12 +33,14 @@ export default {
     :root {
         --background-color: #071521;
         --background-color-secondary: #091a28;
+        --background-color-tertiary: #0d2538;
         --border-color: #0d2538;
         --text-color: #ebf4f1;
 
         [data-theme="light"] {
             --background-color: #f3f5f4;
             --background-color-secondary: #fff;
+            --background-color-tertiary: #fafafa;
             --border-color: #cfe6e6;
             --text-color: rgba(0,0,0,0.8);
         }

@@ -3,6 +3,7 @@
     <div class="csoc-leaderboard-table">
       <b-table
         :data="getTableData"
+        :loading="isLoading"
         ref="table"
         paginated
         per-page="5"
@@ -15,16 +16,17 @@
         aria-current-label="Current page"
       >
         <template slot-scope="props">
-          <b-table-column field="rank" label="Rank" width="40" numeric>{{ props.row.rank }}</b-table-column>
+          <b-table-column field="rank" label="Rank" width="40" numeric>
+            <b v-if="![1,2,3].includes(props.row.rank)">
+              <span>{{ props.row.rank }}</span>
+            </b>
+            <b-icon v-else pack="fas" :style="getMedalColor(props.row.rank)" icon="medal"></b-icon>
+          </b-table-column>
 
-          <b-table-column
-            field="profile.username"
-            label="Username"
-            centered
-            style="cursor:pointer;"
-          >
+          <b-table-column field="profile.username" label="Username" centered searchable>
             <template>
               <span
+                style="cursor:pointer;"
                 class="tag is-success"
                 @click="toggle(props.row)"
               >{{ props.row.profile.username }}</span>
@@ -34,14 +36,18 @@
           <b-table-column v-for="(task, index) in taskNames" :key="index" :label="task" centered>
             <span
               v-if="props.row.tasks[index].status === 'Submitted'"
-            >{{ props.row.tasks[index].score }} / <span class="csoc-total-score">
+              style="font-family: 'Baloo Bhaina 2', cursive;"
+            >
+              {{ props.row.tasks[index].score }} /
+              <span class="csoc-total-score">
                 <small>{{ props.row.tasks[index].totalScore }}</small>
-              </span></span>
-            <span v-else>Not Submitted</span>
+              </span>
+            </span>
+            <span v-else style="font-family: 'Baloo Bhaina 2', cursive; color: grey;">Not Submitted</span>
           </b-table-column>
 
           <b-table-column label="Total Score" centered>
-            <span>
+            <span style="font-family: 'Baloo Bhaina 2', cursive;">
               {{ props.row.score }} /
               <span class="csoc-total-score">
                 <small>{{ props.row.totalScore }}</small>
@@ -61,14 +67,62 @@
               <div class="content">
                 <p>
                   <strong>{{ props.row.profile.name }}</strong>
-                  (<a :href="getGithubLink(props.row.profile.username)"><small>@{{ props.row.profile.username }}</small></a>)
-                  <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin ornare magna eros, eu pellentesque tortor vestibulum ut.
-                  Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                  (<a :href="getGithubLink(props.row.profile.username)">
+                    <small>@{{ props.row.profile.username }}</small>
+                  </a>)
+                  <br />
+                  <b-collapse
+                    class="card"
+                    animation="slide"
+                    v-for="(task, index) of props.row.submittedTasks"
+                    :key="index"
+                    :open="props.row.submittedTasks[index].isOpen"
+                    @open="props.row.submittedTasks[index].isOpen = true"
+                    @close="props.row.submittedTasks[index].isOpen = false"
+                  >
+                    <div slot="trigger" slot-scope="props" class="card-header" role="button">
+                      <p class="card-header-title">{{ task.name }}</p>
+                      <a class="card-header-icon">
+                        <b-icon :icon="props.open ? 'angle-up' : 'angle-down'"></b-icon>
+                      </a>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <b-table :data="props.row.submittedTasks[index].subtasks">
+                          <template slot-scope="subtaskProps">
+                            <b-table-column
+                              field="subtask"
+                              label="Subtask"
+                              style="font-family: 'Baloo Bhaina 2', cursive;"
+                            >{{ subtaskProps.row.name }}</b-table-column>
+                            <b-table-column label="Score" centered>
+                              <span style="font-family: 'Baloo Bhaina 2', cursive;">
+                                {{ subtaskProps.row.score }} /
+                                <span class="csoc-total-score">
+                                  <small>{{ subtaskProps.row.totalScore }}</small>
+                                </span>
+                              </span>
+                            </b-table-column>
+                          </template>
+                        </b-table>
+                      </div>
+                    </div>
+                  </b-collapse>
                 </p>
               </div>
             </div>
           </article>
+        </template>
+
+        <template slot="empty">
+          <section class="section">
+            <div class="content has-text-centered">
+              <p>
+                <b-icon icon="frown" size="is-large"></b-icon>
+              </p>
+              <p>No entries yet.</p>
+            </div>
+          </section>
         </template>
       </b-table>
     </div>
@@ -103,7 +157,8 @@ export default {
   data() {
     return {
       tableData: [],
-      taskNames: []
+      taskNames: [],
+      isLoading: true
     };
   },
   computed: {
@@ -112,6 +167,9 @@ export default {
         return this.tableData;
       }
       return this.tableData;
+    },
+    themeTransitionStyle: function() {
+      return this.$store.getters.inTransition ? "themeTransition" : null;
     }
   },
   methods: {
@@ -128,7 +186,7 @@ export default {
     },
 
     getLeaderboardData(backendData) {
-      const allTasks = this.$page.tasks.edges.reverse();
+      const allTasks = this.$page.tasks.edges;
       let data = {};
 
       for (let participant of backendData) {
@@ -242,26 +300,48 @@ export default {
         tableRow.tasks = participant[username].tasks;
         tableRow.totalScore = participant[username].totalScore;
 
+        var submittedTasks = [];
+        for (let task of tableRow.tasks) {
+          if (task.status === "Submitted") {
+            task.isOpen = false;
+            submittedTasks.push(task);
+          }
+        }
+        tableRow.submittedTasks = submittedTasks;
+
         tableData.push(tableRow);
       }
       this.tableData = tableData;
     },
+
     getTaskNames() {
-      const allTasks = this.$page.tasks.edges;
+      const allTasks = this.$page.tasks.edges.reverse();
       for (let { node } of allTasks) {
         this.taskNames.push(node.taskName);
       }
     },
+
     getGithubLink(username) {
-      return 'https://www.github.com/' + username;
+      return "https://www.github.com/" + username;
+    },
+
+    getMedalColor(rank) {
+      if (rank === 1) {
+        return "color: gold";
+      } else if (rank === 2) {
+        return "color: silver";
+      } else {
+        return "color: brown";
+      }
     }
   },
   mounted() {
+    this.getTaskNames();
     this.fetchDataFromBackend().then(data => {
       this.generateTableData(
         this.rankParticipants(this.getLeaderboardData(data))
       );
-      this.getTaskNames();
+      this.isLoading = false;
     });
   }
 };
@@ -279,5 +359,43 @@ export default {
 
 .pagination-link {
   color: var(--text-color);
+}
+
+.card-header-title {
+  margin: auto !important;
+}
+
+.b-table .table {
+  border: 1px solid var(--border-color);
+}
+
+.table {
+  background: var(--background-color-secondary);
+  color: var(--text-color);
+}
+
+.table thead td,
+.table thead th {
+  color: var(--text-color);
+}
+
+.b-table .table tr.detail {
+  background: var(--background-color-tertiary);
+}
+
+strong {
+  color: var(--text-color);
+}
+
+.card {
+  background: var(--background-color);
+}
+
+.card-header-title {
+  color: var(--text-color);
+}
+
+thead th {
+  color: var(--text-color) !important;
 }
 </style>
