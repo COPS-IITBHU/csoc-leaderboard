@@ -28,5 +28,27 @@
                 "totalPoints": "35"
             }
         ]
+    },
+    {
+        "taskId": 2,
+        "taskName": "Library App",
+        "subtasks": [
+            {
+                "subtaskName": "Stage 1 (Basic Views)",
+                "totalPoints": "50"
+            },
+            {
+                "subtaskName": "Stage 2 (Book Return)",
+                "totalPoints": "30"
+            },
+            {
+                "subtaskName": "Stage 3 (Rating System)",
+                "totalPoints": "60"
+            },
+            {
+                "subtaskName": "Stage 4 (Auth App)",
+                "totalPoints": "60"
+            }
+        ]
     }
 ]
