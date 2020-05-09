@@ -48,6 +48,10 @@
             {
                 "subtaskName": "Stage 4 (Auth App)",
                 "totalPoints": "60"
+            },
+            {
+                "subtaskName": "Originality of Work",
+                "totalPoints": "20"
             }
         ]
     }
