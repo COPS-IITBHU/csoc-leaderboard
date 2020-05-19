@@ -5,7 +5,7 @@
         <p class="csoc-footer-text">
           Made with
           <span style="color: #e25555;">&#9829;</span> by
-          <a href="https://copsiitbhu.co.in/" class="footer-logo">COPS</a>
+          <a href="https://github.com/COPS-IITBHU/csoc-leaderboard" class="footer-logo">COPS</a>
         </p>
       </div>
     </div>

@@ -54,5 +54,19 @@
                 "totalPoints": "20"
             }
         ]
+    },
+    {
+        "taskId": 3,
+        "taskName": "Todo API",
+        "subtasks": [
+            {
+                "subtaskName": "Basic Endpoints",
+                "totalPoints": "100"
+            },
+            {
+                "subtaskName": "Collaborator Feature",
+                "totalPoints": "100"
+            }
+        ]
     }
 ]
