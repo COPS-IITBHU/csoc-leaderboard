@@ -6,7 +6,7 @@
         :loading="isLoading"
         ref="table"
         paginated
-        per-page="5"
+        per-page="10"
         detailed
         detail-key="rank"
         :show-detail-icon="false"
