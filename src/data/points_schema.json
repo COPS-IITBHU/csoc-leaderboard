@@ -68,5 +68,15 @@
                 "totalPoints": "100"
             }
         ]
+    },
+    {
+        "taskId": 4,
+        "taskName": "AR / Flutter",
+        "subtasks": [
+            {
+                "subtaskName": "Assignment",
+                "totalPoints": "200"
+            }
+        ]
     }
 ]
