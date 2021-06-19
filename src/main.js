@@ -1,26 +1,26 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
-import DefaultLayout from '~/layouts/Default.vue'
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp, faDragon, faExclamation, faFrown, faMedal, faMoon, faOtter, faSun } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
-
 import VueMq from 'vue-mq'
+import Vuex from "vuex"
+import DefaultLayout from '~/layouts/Default.vue'
+import theme from "./store/theme"
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSun, faMoon, faExclamation, faAngleLeft, faAngleRight, faAngleUp, faAngleDown, faMedal, faFrown} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import Vuex from "vuex";
-import theme from "./store/theme";
+
+
 
 export default function (Vue, { appOptions, router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
   // Fontawesome
-  library.add(faSun, faMoon, faExclamation, faAngleLeft, faAngleRight, faAngleUp, faAngleDown, faMedal, faFrown);
+  library.add(faSun, faMoon, faExclamation, faAngleLeft, faAngleRight, faAngleUp, faAngleDown, faMedal, faFrown, faDragon, faOtter);
   Vue.component('vue-fontawesome', FontAwesomeIcon);
 
   // Use Buefy

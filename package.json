@@ -13,6 +13,7 @@
     "axios": "^0.19.2",
     "buefy": "^0.8.16",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-windicss": "^1.0.0",
     "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",
     "vue-mq": "^1.0.1",
