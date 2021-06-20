@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "taskName": "Interactive Game",
+        "subtasks": [
+            {
+                "subtaskName": "Multi Player",
+                "totalPoints": "25"
+            },
+            {
+                "subtaskName": "AI Minmax",
+                "totalPoints": "40"
+            },
+            {
+                "subtaskName": "UI",
+                "totalPoints": "15"
+            },
+            {
+                "subtaskName": "UX",
+                "totalPoints": "15"
+            },
+            {
+                "subtaskName": "Responsive",
+                "totalPoints": "30"
+            },
+            {
+                "subtaskName": "Utility Features",
+                "totalPoints": "25"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "taskName": "Todo App",
+        "subtasks": [
+            {
+                "subtaskName": "Login",
+                "totalPoints": "15"
+            },
+            {
+                "subtaskName": "Auth Check",
+                "totalPoints": "15"
+            },
+            {
+                "subtaskName": "Add tasks",
+                "totalPoints": "25"
+            },
+            {
+                "subtaskName": "Get tasks",
+                "totalPoints": "25"
+            },
+            {
+                "subtaskName": "Edit tasks",
+                "totalPoints": "35"
+            },
+            {
+                "subtaskName": "Delete tasks",
+                "totalPoints": "35"
+            }
+        ]
+    }
+]

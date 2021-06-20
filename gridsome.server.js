@@ -7,14 +7,36 @@
 
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {
-    const PointsSchema = require('./src/data/points_schema.json');
-    const collection = addCollection({
-      typeName: 'Tasks'
+
+    // 2020 Schema All
+    const pointsSchema2020 = require("./src/data/2020/points_schema.json")
+    const collection2020 = addCollection({
+      typeName: 'Tasks2020'
+    })
+    pointsSchema2020.forEach((task) => {
+      collection2020.addNode(task)
+    })
+
+    // 2021 Schema Frontend Track
+    const webPointsSchema2021 = require('./src/data/2021/web.json');
+    const collectionWeb2021 = addCollection({
+      typeName: 'WebTasks2021'
     });
 
-    for (const task of PointsSchema) {
-      collection.addNode(task);
+    for (const task of webPointsSchema2021) {
+      collectionWeb2021.addNode(task);
     }
+
+    const mobilePointsSchema2021 = require('./src/data/2021/mobile.json');
+    const collectionMobile2021 = addCollection({
+      typeName: 'MobileTasks2021'
+    });
+
+    for (const task of mobilePointsSchema2021) {
+      collectionMobile2021.addNode(task);
+    }
+
+    // 2021 Schema Backend
   })
 
   api.createPages(({ createPage }) => {

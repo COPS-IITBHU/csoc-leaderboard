@@ -24,6 +24,14 @@ export default {
         }
       ]
     }
+  },
+  beforeMount() {
+    const theme = this.$store.getters.currentTheme;
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
   }
 }
 </script>

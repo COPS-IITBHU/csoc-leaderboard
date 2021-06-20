@@ -1,17 +1,9 @@
 <template>
-  <b-navbar :transparent="true" :class="['theme-navbar', themeTransitionStyle]">
+  <b-navbar :transparent="true" :class="['theme-navbar', themeTransitionStyle, 'wi-container wi-mx-auto wi-px-4 md:wi-px-0']">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <div class="csoc-logo">{{ logoText }}</div>
       </b-navbar-item>
-    </template>
-    <template slot="start" v-if="!is404">
-      <b-navbar-item
-        :active="true"
-        class="csoc-leaderboard"
-        tag="router-link"
-        :to="{ path: '/' }"
-      >Leaderboard</b-navbar-item>
     </template>
 
     <template slot="end">

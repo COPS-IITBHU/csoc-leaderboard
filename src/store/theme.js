@@ -14,6 +14,11 @@ export default {
   mutations: {
     TOGGLE_THEME(state) {
       state.theme = state.theme === "dark" ? "light" : "dark";
+      if (state.theme === 'dark') {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
     }
   },
   actions: {
