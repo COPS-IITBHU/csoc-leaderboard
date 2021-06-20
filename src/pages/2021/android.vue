@@ -152,7 +152,7 @@ import axios from "axios";
 
 export default {
   metaInfo: {
-    title: "Leaderboard"
+    title: "Android 2021"
   },
   data() {
     return {
