@@ -1,5 +1,5 @@
 <template>
-  <b-navbar :transparent="true" :class="['theme-navbar', themeTransitionStyle, 'wi-container wi-mx-auto']">
+  <b-navbar :transparent="true" :class="['theme-navbar', themeTransitionStyle, 'wi-container wi-mx-auto wi-px-4 md:wi-px-0']">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <div class="csoc-logo">{{ logoText }}</div>

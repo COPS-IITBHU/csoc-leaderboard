@@ -4,8 +4,8 @@
       <h1 class="wi-text-4xl">
         Application Development Track
       </h1>
-      <ui class="wi-flex wi-flex-col wi-items-center wi-list-none wi-my-2">
-        <li v-for="year in years" :key="year.name" class="wi-backdrop-filter wi-backdrop-blur-md wi-my-4">
+      <ul class="wi-flex wi-flex-col wi-items-center wi-list-none wi-my-2">
+        <li v-for="year in years" :key="year.name" class="wi-my-4">
           <div class="wi-flex wi-items-center dark:wi-text-light-100">
             <h2 class="wi-inline-block wi-text-2xl">
               {{ combineName(year.link,year.icon) }}s
@@ -15,11 +15,11 @@
           <p class="wi-text-lg wi-text-justify dark:wi-text-gray-50 wi-my-2">
             {{ year.description }}
           </p>
-          <g-link :to="year.link" class="dark:hover:wi-text-light-100">
+          <g-link :to="year.link" class="wi-rounded-md wi-shadow-lg dark:wi-bg-gray-200 wi-py-[0.4rem] wi-px-3 wi-mt-4">
             Scoreboard
           </g-link>
         </li>
-      </ui>
+      </ul>
     </section>
   </Layout>
 </template>
@@ -57,16 +57,16 @@ export default {
 
 <style scoped>
 .dark h1 {
-  background: #11998e;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
 }
 
 h1 {
-  background: #159957;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: repeat;
+  background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
