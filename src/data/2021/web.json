@@ -21,7 +21,7 @@
             },
             {
                 "subtaskName": "Responsive",
-                "totalPoints": "30"
+                "totalPoints": "15"
             },
             {
                 "subtaskName": "Utility Features",
@@ -58,5 +58,39 @@
                 "totalPoints": "35"
             }
         ]
-    }
+    },
+    {
+      "id": 3,
+      "taskName": "JS Framework",
+      "subtasks": [
+          {
+              "subtaskName": "Auth",
+              "totalPoints": "10"
+          },
+          {
+              "subtaskName": "Login",
+              "totalPoints": "15"
+          },
+          {
+              "subtaskName": "Add tasks",
+              "totalPoints": "25"
+          },
+          {
+              "subtaskName": "Get tasks",
+              "totalPoints": "30"
+          },
+          {
+            "subtaskName":"Update Task",
+            "totalPoints": "40"
+          },
+          {
+              "subtaskName": "Delete tasks",
+              "totalPoints": "20"
+          },
+          {
+              "subtaskName": "UI Improvement",
+              "totalPoints": "10"
+          }
+      ]
+  }
 ]

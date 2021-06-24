@@ -1,62 +1,108 @@
 [
-    {
-        "id": 1,
-        "taskName": "Interactive Game",
-        "subtasks": [
-            {
-                "subtaskName": "Multi Player",
-                "totalPoints": "25"
-            },
-            {
-                "subtaskName": "AI Minmax",
-                "totalPoints": "40"
-            },
-            {
-                "subtaskName": "UI",
-                "totalPoints": "15"
-            },
-            {
-                "subtaskName": "UX",
-                "totalPoints": "15"
-            },
-            {
-                "subtaskName": "Responsive",
-                "totalPoints": "30"
-            },
-            {
-                "subtaskName": "Utility Features",
-                "totalPoints": "25"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "taskName": "Todo App",
-        "subtasks": [
-            {
-                "subtaskName": "Login",
-                "totalPoints": "15"
-            },
-            {
-                "subtaskName": "Auth Check",
-                "totalPoints": "15"
-            },
-            {
-                "subtaskName": "Add tasks",
-                "totalPoints": "25"
-            },
-            {
-                "subtaskName": "Get tasks",
-                "totalPoints": "25"
-            },
-            {
-                "subtaskName": "Edit tasks",
-                "totalPoints": "35"
-            },
-            {
-                "subtaskName": "Delete tasks",
-                "totalPoints": "35"
-            }
-        ]
-    }
+  {
+    "id": 1,
+    "taskName": "Interactive Game",
+    "subtasks": [
+      {
+        "subtaskName": "Multi Player",
+        "totalPoints": "25"
+      },
+      {
+        "subtaskName": "AI Minmax",
+        "totalPoints": "40"
+      },
+      {
+        "subtaskName": "UI",
+        "totalPoints": "15"
+      },
+      {
+        "subtaskName": "UX",
+        "totalPoints": "15"
+      },
+      {
+        "subtaskName": "Responsive",
+        "totalPoints": "15"
+      },
+      {
+        "subtaskName": "Utility Features",
+        "totalPoints": "25"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "taskName": "Todo Offline",
+    "subtasks": [
+      {
+        "subtaskName": "Home",
+        "totalPoints": "10"
+      },
+      {
+        "subtaskName": "Add Task",
+        "totalPoints": "15"
+      },
+      {
+        "subtaskName": "Edit tasks",
+        "totalPoints": "15"
+      },
+      {
+        "subtaskName": "Delete tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Get tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Design",
+        "totalPoints": "15"
+      },
+      {
+        "subtaskName": "Local DB",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Search",
+        "totalPoints": "15"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "taskName": "Todo Online",
+    "subtasks": [
+      {
+        "subtaskName": "Auth",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Search Bar",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Add Task",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Get tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Edit tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Delete tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Quality",
+        "totalPoints": "10"
+      },
+      {
+        "subtaskName": "Design",
+        "totalPoints": "20"
+      }
+    ]
+  }
 ]
