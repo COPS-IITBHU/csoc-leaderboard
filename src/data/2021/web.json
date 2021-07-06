@@ -4,11 +4,11 @@
         "taskName": "Interactive Game",
         "subtasks": [
             {
-                "subtaskName": "Multi Player",
+                "subtaskName": "Multiplayer/Sudoku Impl",
                 "totalPoints": "25"
             },
             {
-                "subtaskName": "AI Minmax",
+                "subtaskName": "Minmax/Board generation",
                 "totalPoints": "40"
             },
             {
