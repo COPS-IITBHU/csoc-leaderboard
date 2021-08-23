@@ -35,15 +35,15 @@
     "subtasks": [
       {
         "subtaskName": "Home",
-        "totalPoints": "10"
+        "totalPoints": "15"
       },
       {
         "subtaskName": "Add Task",
-        "totalPoints": "15"
+        "totalPoints": "20"
       },
       {
         "subtaskName": "Edit tasks",
-        "totalPoints": "15"
+        "totalPoints": "20"
       },
       {
         "subtaskName": "Delete tasks",
@@ -63,7 +63,7 @@
       },
       {
         "subtaskName": "Search",
-        "totalPoints": "15"
+        "totalPoints": "20"
       }
     ]
   },
