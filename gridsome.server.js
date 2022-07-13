@@ -36,7 +36,24 @@ module.exports = function (api) {
       collectionMobile2021.addNode(task);
     }
 
-    // 2021 Schema Backend
+    // 2022 Schema Frontend Track
+    const webPointsSchema2022 = require('./src/data/2022/web.json');
+    const collectionWeb2022 = addCollection({
+      typeName: 'WebTasks2022'
+    });
+
+    for (const task of webPointsSchema2022) {
+      collectionWeb2022.addNode(task);
+    }
+
+    const mobilePointsSchema2022 = require('./src/data/2022/mobile.json');
+    const collectionMobile2022 = addCollection({
+      typeName: 'MobileTasks2022'
+    });
+
+    for (const task of mobilePointsSchema2022) {
+      collectionMobile2022.addNode(task);
+    }
   })
 
   api.createPages(({ createPage }) => {
