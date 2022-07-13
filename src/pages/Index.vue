@@ -42,6 +42,11 @@ export default {
           description: "Enthusiastic first yearties force COPS to start track based CSOC Dev for both frontend and backend. The Frontend track included good 'ol Web Development and Native Android as well as Cross Platform Flutter Development were the new additions.",
           icon: "otter",
           link: "2021"
+        },
+         {
+          description: "Enthusiastic first yearties force COPS to start track based CSOC Dev for both frontend and backend. The Frontend track included good 'ol Web Development and Native Android as well as Cross Platform Flutter Development were the new additions.",
+          icon: "bug",
+          link: "2022"
         }
       ]
     }
