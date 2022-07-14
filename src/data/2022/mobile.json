@@ -3,26 +3,26 @@
     "id": 1,
     "taskName": "Calculator or Hangman",
     "subtasks": [
-        {
-            "subtaskName": "Task 1",
-            "totalPoints": "30"
-        },
-        {
-            "subtaskName": "Task 2",
-            "totalPoints": "30"
-        },
-        {
-            "subtaskName": "Task 3",
-            "totalPoints": "30"
-        },
-        {
-            "subtaskName": "Task 4",
-            "totalPoints": "30"
-        },
-        {
-            "subtaskName": "Bonus",
-            "totalPoints": "20"
-        }
+      {
+        "subtaskName": "Task 1",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Task 2",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Task 3",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Task 4",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Bonus",
+        "totalPoints": "20"
+      }
     ]
   },
   {

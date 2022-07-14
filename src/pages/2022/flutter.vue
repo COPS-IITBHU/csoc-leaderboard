@@ -152,7 +152,7 @@ import axios from "axios";
 
 export default {
   metaInfo: {
-    title: "Flutter 2021"
+    title: "Flutter 2022"
   },
   data() {
     return {
@@ -229,6 +229,7 @@ export default {
             };
 
             if (scoreIndex === participant.points.length) {
+              console.log(scoreIndex);
               throw Error("Points schema is not valid.");
             }
 
