@@ -12,7 +12,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
     "buefy": "^0.8.16",
-    "gridsome": "^0.7.0",
+    "gridsome": "^0.7.23",
     "gridsome-plugin-windicss": "^1.0.0",
     "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",

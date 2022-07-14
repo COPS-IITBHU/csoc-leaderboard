@@ -2,7 +2,7 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp, faDragon, faExclamation, faFrown, faMedal, faMoon, faOtter, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp, faDragon, faExclamation, faFrown, faMedal, faMoon, faOtter, faSun, faBug} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
@@ -20,7 +20,7 @@ export default function (Vue, { appOptions, router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 
   // Fontawesome
-  library.add(faSun, faMoon, faExclamation, faAngleLeft, faAngleRight, faAngleUp, faAngleDown, faMedal, faFrown, faDragon, faOtter);
+  library.add(faSun, faMoon, faExclamation, faAngleLeft, faAngleRight, faAngleUp, faAngleDown, faMedal, faFrown, faDragon, faOtter, faBug);
   Vue.component('vue-fontawesome', FontAwesomeIcon);
 
   // Use Buefy

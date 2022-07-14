@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "taskName": "Calculator or Hangman",
+    "subtasks": [
+      {
+        "subtaskName": "Task 1",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Task 2",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Task 3",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Task 4",
+        "totalPoints": "30"
+      },
+      {
+        "subtaskName": "Bonus",
+        "totalPoints": "20"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "taskName": "Birthday Application",
+    "subtasks": [
+      {
+        "subtaskName": "Add birthday",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Get birthdays",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Edit birthday",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Delete birthday",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Use of Local Database",
+        "totalPoints": "25"
+      },
+      {
+        "subtaskName": "Search Bar Implementation",
+        "totalPoints": "35"
+      },
+      {
+        "subtaskName": "Design, Smoothness and Innovation",
+        "totalPoints": "15"
+      },
+      {
+        "subtaskName": "Notification",
+        "totalPoints": "45"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "taskName": "Todo Online",
+    "subtasks": [
+      {
+        "subtaskName": "Auth",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "API Handling",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Add Task",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Get tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Edit tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Delete tasks",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Quality",
+        "totalPoints": "10"
+      },
+      {
+        "subtaskName": "Design",
+        "totalPoints": "20"
+      },
+      {
+        "subtaskName": "Bonus Task - Animation",
+        "totalPoints": "50"
+      }
+    ]
+  }
+]

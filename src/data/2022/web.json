@@ -1,0 +1,96 @@
+[
+    {
+        "id": 1,
+        "taskName": "Calculator or Hangman",
+        "subtasks": [
+            {
+                "subtaskName": "Task 1",
+                "totalPoints": "30"
+            },
+            {
+                "subtaskName": "Task 2",
+                "totalPoints": "30"
+            },
+            {
+                "subtaskName": "Task 3",
+                "totalPoints": "30"
+            },
+            {
+                "subtaskName": "Task 4",
+                "totalPoints": "30"
+            },
+            {
+                "subtaskName": "Bonus",
+                "totalPoints": "20"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "taskName": "Todo App",
+        "subtasks": [
+            {
+                "subtaskName": "Login",
+                "totalPoints": "15"
+            },
+            {
+                "subtaskName": "Auth Check",
+                "totalPoints": "15"
+            },
+            {
+                "subtaskName": "Add tasks",
+                "totalPoints": "25"
+            },
+            {
+                "subtaskName": "Get tasks",
+                "totalPoints": "25"
+            },
+            {
+                "subtaskName": "Edit tasks",
+                "totalPoints": "35"
+            },
+            {
+                "subtaskName": "Delete tasks",
+                "totalPoints": "35"
+            },
+            {
+                "subtaskName": "Bonus",
+                "totalPoints": "30"
+            }
+        ]
+    },
+    {
+      "id": 3,
+      "taskName": "JS Framework",
+      "subtasks": [
+          {
+              "subtaskName": "Auth",
+              "totalPoints": "10"
+          },
+          {
+              "subtaskName": "Login",
+              "totalPoints": "15"
+          },
+          {
+              "subtaskName": "Add tasks",
+              "totalPoints": "25"
+          },
+          {
+              "subtaskName": "Get tasks",
+              "totalPoints": "30"
+          },
+          {
+            "subtaskName":"Update Task",
+            "totalPoints": "40"
+          },
+          {
+              "subtaskName": "Delete tasks",
+              "totalPoints": "20"
+          },
+          {
+              "subtaskName": "UI Improvement",
+              "totalPoints": "10"
+          }
+      ]
+  }
+]

@@ -39,9 +39,14 @@ export default {
           link: "2020"
         },
         {
-          description: "Enthusiastic first yearties force COPS to start track based CSOC Dev for both frontend and backend. The Frontend track included good 'ol Web Development and Native Android as well as Cross Platform Flutter Development were the new additions.",
+          description: "Enthusiastic first yearites force COPS to start track based CSOC Dev for both frontend and backend. The Frontend track included good 'ol Web Development and Native Android as well as Cross Platform Flutter Development were the new additions.",
           icon: "otter",
           link: "2021"
+        },
+         {
+          description: "Another year...brings another spell of CSOC, full of learning and debugging and a shallow dive into the ever-deep pool of Software Development. Students were given resources and challenges to test their skills and a chance to prove their mettle in various tasks! Tasks varied from creating a Birthday App and making a Hangman Game to building ToDos using multiple tools and technologies. Right from building responsive frontend screens, using local databases to connecting APIs, participants were allowed to explore and learn stuff. Excitedly, along with the previous years' prominent tracks, Web Dev, Native Android, and Flutter Dev, this year, we had an extra and unique addition of the Game Development Track!",
+          icon: "bug",
+          link: "2022"
         }
       ]
     }
