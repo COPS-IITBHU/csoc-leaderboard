@@ -87,6 +87,10 @@
               "subtaskName": "Delete tasks",
               "totalPoints": "35"
           },
+          {
+              "subtaskName": "Bonus for submission",
+              "totalPoints": "30"
+          }
       ]
   }
 ]
