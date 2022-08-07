@@ -65,7 +65,7 @@
       "subtasks": [
           {
               "subtaskName": "Auth",
-              "totalPoints": "10"
+              "totalPoints": "15"
           },
           {
               "subtaskName": "Login",
@@ -77,19 +77,19 @@
           },
           {
               "subtaskName": "Get tasks",
-              "totalPoints": "30"
+              "totalPoints": "25"
           },
           {
             "subtaskName":"Update Task",
-            "totalPoints": "40"
+            "totalPoints": "35"
           },
           {
               "subtaskName": "Delete tasks",
-              "totalPoints": "20"
+              "totalPoints": "35"
           },
           {
-              "subtaskName": "UI Improvement",
-              "totalPoints": "10"
+              "subtaskName": "Bonus for submission",
+              "totalPoints": "30"
           }
       ]
   }
