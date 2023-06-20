@@ -181,7 +181,7 @@ export default {
 
     fetchDataFromBackend() {
       return axios
-        .get(`https://csoc-dev.herokuapp.com/leaderboard/?year=${this.year}&track=${this.track}`)
+        .get(`https://csoc-dev.onrender.com/leaderboard/?year=${this.year}&track=${this.track}`)
         .then(({ data }) => {
           return data;
         });

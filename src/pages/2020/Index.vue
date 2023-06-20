@@ -180,7 +180,7 @@ export default {
 
     fetchDataFromBackend() {
       return axios
-        .get(`https://csoc-dev.herokuapp.com/leaderboard/?year=${this.year}`)
+        .get(`https://csoc-dev.onrender.com/leaderboard/?year=${this.year}`)
         .then(({ data }) => {
           return data;
         });
